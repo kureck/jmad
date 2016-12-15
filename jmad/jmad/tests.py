@@ -1,6 +1,7 @@
 from django.test import LiveServerTestCase
 from selenium import webdriver
 
+
 # https://codeyarns.com/2016/10/18/selenium-error-on-geckodriver/
 class StudentTestCase(LiveServerTestCase):
 
