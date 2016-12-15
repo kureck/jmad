@@ -2,12 +2,25 @@ from django.test import TestCase, RequestFactory
 from django.db.models.query import QuerySet
 
 from jmad.solos.views import index
+from jmad.solos.models import Solo
 
 
 class IndexViewTestCase(TestCase):
 
     def setUp(self):
         self.factory = RequestFactory()
+
+        self.drum_solo = Solo.objects.create(
+            instrument='drums',
+            artist='Rich',
+            track='Bugle Call Rag'
+        )
+
+        self.bass_solo = Solo.objects.create(
+            instrument='saxophone',
+            artist='Coltrane',
+            track='Mr. PC'
+        )
 
     def test_index_view_basic(self):
         """
