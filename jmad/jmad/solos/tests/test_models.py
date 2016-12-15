@@ -13,15 +13,15 @@ class SoloModelTestCase(TestCase):
         )
 
         self.drum_solo = Solo.objects.create(
-           instrument='drums',
-           artist='Rich',
-           track='Bugle Call Rag'
+            instrument='drums',
+            artist='Rich',
+            track='Bugle Call Rag'
         )
 
-       self.bass_solo = Solo.objects.create(
-           instrument='saxophone',
-           artist='Coltrane',
-           track='Mr. PC'
+        self.bass_solo = Solo.objects.create(
+            instrument='saxophone',
+            artist='Coltrane',
+            track='Mr. PC'
         )
 
     def test_solo_basic(self):
